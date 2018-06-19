@@ -3,6 +3,11 @@ Overview
 
 This tool builds a replication topology as described in the configuration.  By default, it plans and applies changes related to the current host, but it can also be run centrally to plan and apply changes for the entire topology.
 
+Requirements
+============
+
+The Python packages `python-ldap` and `python-enum34` are required.
+
 Configuration
 ============
 
