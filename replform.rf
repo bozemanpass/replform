@@ -1,0 +1,42 @@
+{
+  "suffix": "dc=bozemanpass,dc=local",
+  "repman": {
+    "dn": "cn=repman,cn=config",
+    "pw": "secret12"
+  },
+  "suppliers": [
+    {
+      "replicaid": 5,
+      "hostname": "test5.bozemanpass.local",
+      "port": 389,
+      "binddn": "cn=Directory Manager",
+      "bindpw": "secret12",
+      "changelogdir": "/var/lib/dirsrv/slapd-bpi/changelogdb"
+    },
+    {
+      "replicaid": 6,
+      "hostname": "test6.bozemanpass.local",
+      "port": 389,
+      "binddn": "cn=Directory Manager",
+      "bindpw": "secret12",
+      "init_from": "test5.bozemanpass.local",
+      "changelogdir": "/var/lib/dirsrv/slapd-bpi/changelogdb"
+    }
+   ],
+  "consumers": [
+    {
+      "hostname": "test76.bozemanpass.local",
+      "port": 389,
+      "binddn": "cn=Directory Manager",
+      "bindpw": "secret12",
+      "init_from": "test5.bozemanpass.local"
+    },
+    {
+      "hostname": "test7.bozemanpass.local",
+      "port": 389,
+      "binddn": "cn=Directory Manager",
+      "bindpw": "secret12",
+      "init_from": "test5.bozemanpass.local"
+    }
+   ]
+}
